@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인 전 메인 페이지</title>
+    <link rel="stylesheet" href="/css/main1.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <div id="logo">
+        <img src="/images/logo.png" alt="로고" width="50px" ; />
+      </div>
+      <div id="saveList" onclick="goLoginPage()">
+        <img
+          src="/images/heart.png"
+          alt="찜목록"
+          width="22.5px"
+          heigth="19.5px"
+        />
+      </div>
+      <div id="myPage" onclick="goLoginPage()">
+        <img
+          src="/images/person.png"
+          alt="마이페이지"
+          width="20.5px"
+          heigth="22.5px"
+        />
+      </div>
+      <div id="mainImage">
+        <img
+          src="/images/mainImage.png"
+          alt="메인이미지"
+          width="342px"
+          height="382px"
+        />
+      </div>
+      <button type="submit" id="loginBtn" onclick="goLoginPage()">
+        로그인
+      </button>
+      <button type="submit" id="joinBtn" onclick="goJoinPage()">
+        회원가입
+      </button>
+    </div>
+    <script>
+      // 로그인 페이지로 이동
+      function goLoginPage() {
+        window.location.href = "login.html";
+      }
+
+      // 회원가입 페이지로 이동
+      function goJoinPage() {
+        window.location.href = "join.html";
+      }
+    </script>
+  </body>
+</html>

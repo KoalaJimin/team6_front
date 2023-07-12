@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마이페이지</title>
+    <link rel="stylesheet" href="/css/myPage.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <div id="logo">
+        <img src="/images/logo.png" alt="로고" width="50px" ; />
+      </div>
+      <div id="saveList" onclick="goSaveList()">
+        <img
+          src="/images/heart.png"
+          alt="찜목록"
+          width="22.5px"
+          heigth="19.5px"
+        />
+      </div>
+      <div id="myPage">
+        <img
+          src="/images/person.png"
+          alt="마이페이지"
+          width="20.5px"
+          heigth="22.5px"
+        />
+      </div>
+      <div id="title">멋사님의 효도 내역</div>
+      <button type="submit" id="viewMore">더보기></button>
+      <div id="detail"></div>
+      <button type="submit" id="myInfo">내정보</button>
+      <button type="submit" id="region">관심지역 설정</button>
+    </div>
+    <script>
+      // 찜 페이지로 이동
+      function goSaveList() {
+        window.location.href = "saveList.html";
+      }
+    </script>
+  </body>
+</html>

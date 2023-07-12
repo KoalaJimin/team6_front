@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인 페이지</title>
+    <link rel="stylesheet" href="/css/login.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <div id="loginText">로그인</div>
+      <form method="post" id="loginForm" name="loginForm">
+        <div id="idText">아이디</div>
+        <input
+          type="text"
+          id="idInput"
+          name="userName"
+          placeholder="아이디를 입력해주세요."
+        />
+        <div id="pwText">비밀번호</div>
+        <input
+          type="password"
+          id="pwInput"
+          name="userPassword"
+          placeholder="비밀번호를 입력해주세요."
+        />
+        <input type="checkbox" id="autoLogin" />
+        <label for="autoLogin"></label>
+        <span id="autoLoginText">자동 로그인</span>
+        <button type="submit" value="login" id="loginBtn" disabled>
+          로그인
+        </button>
+      </form>
+      <button type="submit" id="joinBtn" onclick="goJoinPage()">
+        회원가입
+      </button>
+    </div>
+    <script>
+      // 회원가입 페이지로 이동
+      function goJoinPage() {
+        window.location.href = "join.html";
+      }
+
+      const loginId = document.getElementById("idInput");
+      const loginPw = document.getElementById("pwInput");
+      const loginButton = document.getElementById("loginBtn");
+
+      function login() {
+        if (loginId.value.length > 0 && loginPw.value.length > 0) {
+          loginButton.disabled = false;
+        } else {
+          loginButton.disabled = true;
+        }
+      }
+
+      function goMain2() {
+        window.location.href = "main2.html";
+      }
+
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // 폼이 기본적으로 제출되는 것을 방지
+          goMain2(); // "main2.html"로 리디렉션하기 위해 함수를 호출
+        });
+
+      // 입력 필드가 변경될 때마다 로그인 함수를 호출
+      loginId.addEventListener("input", login);
+      loginPw.addEventListener("input", login);
+    </script>
+  </body>
+</html>
