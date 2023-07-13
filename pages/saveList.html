@@ -32,7 +32,26 @@
         />
       </div>
       <div id="title">멋사님의 저장 목록</div>
-      <div id="save"></div>
+      <div id="saveArea">
+        <!-- saveBox를 반복 -->
+        {% for like in likeList %}
+        <div id="saveBox">
+          <div id="photo">
+            <img src="{{ like.image.url }}" alt="식당사진" />
+          </div>
+          <div id="placeName">{{ like.placename }}</div>
+          <div id="region">{{ like.region }}</div>
+          <div id="tag">{{ like.tag }}</div>
+          <div id="sort">{{ like.content }}</div>
+        </div>
+        {% endfor %}
+      </div>
     </div>
+    <script>
+      // 마이 페이지로 이동
+      function goMyPage() {
+        window.location.href = "myPage.html";
+      }
+    </script>
   </body>
 </html>

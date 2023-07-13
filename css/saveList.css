@@ -37,21 +37,85 @@
   color: #a37b59;
 }
 
-#save {
+#saveArea {
+  width: 342px;
+  height: 590px;
+  position: relative;
+  top: 22%;
+  margin: auto;
+  overflow-y: scroll;
+}
+
+#saveArea::-webkit-scrollbar {
+  display: none;
+}
+
+#saveBox {
   width: 342px;
   height: 119px;
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
-  position: absolute;
-  margin-top: 70%;
-  margin-left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  margin-bottom: 30px;
 }
 
-#line {
-  width: 300px;
-  margin-top: 170%;
-  margin-left: 50%;
-  transform: translate(-50%, -50%);
+#photo {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  background-color: red;
+  border-radius: 27px;
+  margin-left: 8%;
+  margin-top: 7%;
+}
+
+#photo > img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+#placeName {
+  position: absolute;
+  margin-left: 35%;
+  margin-top: 9%;
+  width: 194px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: #000000;
+}
+
+#region,
+#tag,
+#sort {
+  font-weight: bold;
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
+}
+
+#region {
+  position: absolute;
+  margin-left: 35%;
+  margin-top: 18%;
+  width: 64px;
+  height: 25px;
+}
+
+#tag {
+  position: absolute;
+  margin-left: 55%;
+  margin-top: 18%;
+  width: 80px;
+  height: 25px;
+}
+
+#sort {
+  position: absolute;
+  margin-left: 79%;
+  margin-top: 18%;
+  width: 50px;
+  height: 25px;
 }
